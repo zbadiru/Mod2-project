@@ -1,0 +1,23 @@
+<h1><%= @routine.name %></h1>
+
+<h2>Belongs to:<%= @routine.personal_trainer.name%></h2>
+
+<h3>All Exercises for this routine</h3>
+
+<% @routine.exercise_lists.each do |e|%>
+    <ul>
+        <li><%= "#{e.name}" %></li>
+    </ul>
+<% end %>
+
+<button>
+    <%= link_to "Edit", edit_routine_path %> 
+</button> |
+
+<button>
+    <%= link_to 'Delete', routine_path(@routine.id),method: :delete, data: { confirm: 'Are you sure you want to delete this Routine?'} %>
+</button> |
+
+<button>
+    <%= link_to "Back", routines_path %>
+</button> 

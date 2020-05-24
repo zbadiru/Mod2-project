@@ -1,0 +1,17 @@
+<h1><%= @personal_trainer.name %></h1>
+
+<h2>Age: <%= @personal_trainer.age %></h2>
+
+<h3>Expitience: <%= @personal_trainer.expirience %></h3>
+
+<button>
+    <%= link_to "Edit", edit_personal_trainer_path %>
+</button> |
+
+<button>
+    <%= link_to 'Delete', personal_trainer_path(@personal_trainer.id),method: :delete, data: { confirm: 'Are you sure you want to delete this Personal Trainer?'} %> |
+</button>
+
+<button>
+    <%= link_to "Back", personal_trainers_path %>
+</button> 

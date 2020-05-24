@@ -1,0 +1,14 @@
+<%= form_for (@routine) do |f|%>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :repetitions %>
+    <%= f.number_field :repetitions %><br>
+
+    <%= f.label :personal_trainer %>
+    <%= f.collection_select :personal_trainer_id, PersonalTrainer.all, :id, :name, prompt: true%> <br>
+
+    <%= f.submit %>
+
+<% end %>

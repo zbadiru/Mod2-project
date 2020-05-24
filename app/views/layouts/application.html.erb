@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <div>
+      <button>
+        <%= link_to "Personal Trainer", personal_trainers_path %>
+      </button> |
+      <button>
+        <%= link_to "Routines", routines_path %>
+      </button> |
+      <button>
+        <%= link_to "Exersices", exercises_path %>
+      </button> |
+      <button>
+        <%= link_to "Workout Plans", workout_plans_path %>
+      </button>
+    </div>
     <%= yield %>
   </body>
 </html>

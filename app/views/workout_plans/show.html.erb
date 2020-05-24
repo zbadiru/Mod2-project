@@ -1,0 +1,15 @@
+<h1><%= @workout_plan.name %></h1>
+
+<h2>Work out exercises???????</h2>
+
+<h3>Personal Trainer: <%= @workout_plan.personal_trainer.name%></h3>
+
+
+
+<button>
+    <%= link_to 'Delete', workout_plan_path(@workout_plan.id),method: :delete, data: { confirm: 'Are you sure you want to delete this Workout Plan?'} %>
+</button> |
+
+<button>
+    <%= link_to "Back", workout_plans_path %>
+</button> 

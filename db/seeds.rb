@@ -9,6 +9,17 @@
 PersonalTrainer.destroy_all
 Routine.destroy_all
 Exercise.destroy_all
+Client.destroy_all
+WorkoutPlan.destroy_all
+
+Client.create ([
+    {
+        name: "Zack"
+    },
+    {
+        name: "Manuel"
+    }
+])
 
 PersonalTrainer.create([
     {
@@ -27,14 +38,13 @@ Routine.create([
     {
         name: 'Chest-day-1',
         personal_trainer_id: 1,
-        exercise_id:1,
-        repetitions: 3
+        repetitions: 3,
+
     },
     {
         name: 'Chest-day-2',
         personal_trainer_id: 2,
         repetitions: 2,
-        exercise_id:2
     }
 ])
 
@@ -43,6 +53,42 @@ Exercise.create([
         name: "press-up"
     },
     {
-        name: "decline"
+        name: "decline press"
+    }, 
+    {
+        name: "Dumbbell Squeeze Press"
+    },
+    {
+        name: "Incline press"
+    }
+])
+
+WorkoutPlan.create([
+    {
+        name: 'Chest Day',
+        personal_trainer_id: 1
+    },
+    {
+        name: 'Leg Day',
+        personal_trainer_id: 2
+    }
+])
+
+ExerciseList.create([
+    {
+        routine_id: 1,
+        exercise_id:1
+    },
+    {
+        routine_id:1,
+        exercise_id:2
+    },
+    {
+        routine_id:1,
+        exercise_id:3
+    },
+    {
+        routine_id:1,
+        exercise_id:4
     }
 ])

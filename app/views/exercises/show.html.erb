@@ -1,0 +1,14 @@
+<h1><%= @exercise.name %></h1>
+
+
+<button>
+    <%= link_to "Edit", edit_exercise_path %> 
+</button> |
+
+<button>
+    <%= link_to 'Delete', exercise_path(@exercise.id),method: :delete, data: { confirm: 'Are you sure you want to delete this exercise?'} %>
+</button> |
+
+<button>
+    <%= link_to "Back", exercises_path %>
+</button> 

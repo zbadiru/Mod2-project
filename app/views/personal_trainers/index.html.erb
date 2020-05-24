@@ -1,0 +1,9 @@
+<h1>All Personal Trainers</h1>
+
+<% @personal_trainers.each do |personal_trainer| %>
+    <h2><%= link_to personal_trainer.name, personal_trainer_path(personal_trainer.id)%></h2>
+<% end %>
+
+<button>
+    <%= link_to "New Personal Trainer", new_personal_trainer_path %>
+</button>

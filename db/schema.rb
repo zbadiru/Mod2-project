@@ -10,19 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_23_211533) do
+ActiveRecord::Schema.define(version: 2020_05_24_180736) do
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
-    t.integer "workout_plan_id"
-    t.integer "personal_trainer_id"
-    t.integer "review_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "exercise_lists", force: :cascade do |t|
+    t.integer "routine_id"
+    t.integer "exercise_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "exercises", force: :cascade do |t|
     t.string "name"
+    t.integer "routine_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -46,8 +51,15 @@ ActiveRecord::Schema.define(version: 2020_05_23_211533) do
   create_table "routines", force: :cascade do |t|
     t.string "name"
     t.integer "personal_trainer_id"
-    t.integer "exercise_id"
+    t.integer "exercise_list_id"
     t.integer "repetitions"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "workout_plans", force: :cascade do |t|
+    t.string "name"
+    t.integer "personal_trainer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,0 +1,9 @@
+<h1>All Routines</h1>
+
+<% @routines.each do |routine| %>
+    <h2><%= link_to routine.name, routine_path(routine.id)%></h2>
+<% end %>
+
+<button>
+    <%= link_to "New Routine", new_routine_path %>
+</button>
