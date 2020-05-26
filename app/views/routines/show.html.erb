@@ -4,11 +4,6 @@
 
 <h3>All Exercises for this routine</h3>
 
-<% @routine.exercise_lists.each do |e|%>
-    <ul>
-        <li><%= "#{e.name}" %></li>
-    </ul>
-<% end %>
 
 <button>
     <%= link_to "Edit", edit_routine_path %> 

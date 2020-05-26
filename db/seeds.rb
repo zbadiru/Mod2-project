@@ -50,16 +50,20 @@ Routine.create([
 
 Exercise.create([
     {
-        name: "press-up"
+        name: "press-up",
+        exercise_list_id: 1
     },
     {
-        name: "decline press"
+        name: "decline press",
+        exercise_list_id: 2
     }, 
     {
-        name: "Dumbbell Squeeze Press"
+        name: "Dumbbell Squeeze Press",
+        exercise_list_id: 3
     },
     {
-        name: "Incline press"
+        name: "Incline press",
+        exercise_list_id: 4
     }
 ])
 

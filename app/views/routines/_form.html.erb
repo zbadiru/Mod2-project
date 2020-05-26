@@ -2,6 +2,18 @@
 
     <%= f.label :name %>
     <%= f.text_field :name %><br>
+    
+    <%= f.label :exercise_1 %>
+    <%= f.collection_select :exercise_list_id, ExerciseList.all, :id, :exercise_id, prompt: true%> <br>
+
+    <%= f.label :exercise_2 %>
+    <%= f.collection_select :exercise_list_id, ExerciseList.all, :id, :exercise_id, prompt: true%> <br>
+
+    <%= f.label :exercise_3 %>
+    <%= f.collection_select :exercise_list_id, ExerciseList.all, :id, :exercise_id, prompt: true%> <br>
+    
+    <%= f.label :exercise_4 %>
+    <%= f.collection_select :exercise_list_id, ExerciseList.all, :id, :exercise_id, prompt: true%> <br>
 
     <%= f.label :repetitions %>
     <%= f.number_field :repetitions %><br>
@@ -11,4 +23,4 @@
 
     <%= f.submit %>
 
-<% end %>
+    <% end %>

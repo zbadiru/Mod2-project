@@ -37,6 +37,6 @@ class RoutinesController < ApplicationController
     private
 
     def routine_params
-        params.require(:routine).permit(:name, :personal_trainer_id, :exercise_id, :repetitions)
+        params.require(:routine).permit(:name, :personal_trainer_id, :exercise_list_id, :repetitions)
     end
 end
