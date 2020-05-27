@@ -1,6 +1,15 @@
 <h1><%= @workout_plan.name %></h1>
+<h2>Routines Create</h2>
+<% for routine in @workout_plan.personal_trainer.routines%>
 
-<h2>Work out exercises???????</h2>
+    <h3><%= routine.name %></h3>
+
+    <% for exercise in routine.exercises %>
+
+    <h4><%= exercise.name %></h4>
+
+    <% end %>
+<% end %>
 
 <h3>Personal Trainer: <%= @workout_plan.personal_trainer.name%></h3>
 

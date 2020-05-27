@@ -1,13 +1,13 @@
+
 <%= form_for (@workout_plan) do |f|%>
 
     <%= f.label :name %>
     <%= f.text_field :name %><br>
 
-    <%= f.label :exercises %><br>
-
-
     <%= f.label :personal_trainer %>
     <%= f.collection_select :personal_trainer_id, PersonalTrainer.all, :id, :name, prompt: true%> <br>
+
+    <% #need a routine drop down option %>
 
     <%= f.submit %>
 <% end %>

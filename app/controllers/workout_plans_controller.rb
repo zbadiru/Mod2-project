@@ -12,7 +12,7 @@ class WorkoutPlansController < ApplicationController
     end
 
     def create
-        @workout_plan = WorkoutPlan.create(workout_plan_params)
+        @workout_plan = WorkoutPlan.create(name: params[:name], personal_trainer_id: params[:personal_trainer_id])
         # byebug
         redirect_to @workout_plan
     end
