@@ -13,7 +13,7 @@ class PersonalTrainersController < ApplicationController
     
     def create
         @personal_trainer = PersonalTrainer.create(personal_trainer_params)
-        redirect_to personal_trainer_path(@personal_trainer.id)
+        redirect_to @personal_trainer
     end
     
     def edit

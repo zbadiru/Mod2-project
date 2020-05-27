@@ -9,6 +9,8 @@ class RoutinesController < ApplicationController
 
     def new
         @routine = Routine.new
+        @routine.exercises.build(name: 'First Exercise')
+        @routine.exercises.build(name: 'Second Exercise')
     end
 
     def create
@@ -37,6 +39,11 @@ class RoutinesController < ApplicationController
     private
 
     def routine_params
-        params.require(:routine).permit(:name, :personal_trainer_id, :exercise_list_id, :repetitions)
+        params.require(:routine).permit(
+            :name, 
+            :personal_trainer_id,  
+            :repetitions,
+            exercises_attributes: [:name]
+        )
     end
 end

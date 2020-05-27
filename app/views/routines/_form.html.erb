@@ -1,26 +1,18 @@
-<%= form_for (@routine) do |f|%>
+<%= form_for @routine do |f|%>
 
     <%= f.label :name %>
     <%= f.text_field :name %><br>
     
-    <%= f.label :exercise_1 %>
-    <%= f.collection_select :exercise_list_id, ExerciseList.all, :id, :exercise_id, prompt: true%> <br>
-
-    <%= f.label :exercise_2 %>
-    <%= f.collection_select :exercise_list_id, ExerciseList.all, :id, :exercise_id, prompt: true%> <br>
-
-    <%= f.label :exercise_3 %>
-    <%= f.collection_select :exercise_list_id, ExerciseList.all, :id, :exercise_id, prompt: true%> <br>
-    
-    <%= f.label :exercise_4 %>
-    <%= f.collection_select :exercise_list_id, ExerciseList.all, :id, :exercise_id, prompt: true%> <br>
-
-    <%= f.label :repetitions %>
-    <%= f.number_field :repetitions %><br>
-
     <%= f.label :personal_trainer %>
     <%= f.collection_select :personal_trainer_id, PersonalTrainer.all, :id, :name, prompt: true%> <br>
 
-    <%= f.submit %>
+    <%= f.fields_for :exercises do |exe| %>
+        <%= exe.label :name%>
+        <%= exe.text_field :name%><br>
 
+    <% end%>
+    <%= f.label :repetitions %>
+    <%= f.number_field :repetitions %><br>
+
+    <%= f.submit %>
     <% end %>
