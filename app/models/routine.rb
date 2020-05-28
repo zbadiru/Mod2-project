@@ -1,7 +1,6 @@
 class Routine < ApplicationRecord
     has_many :exercise_lists
-    has_many :exercises, through: :exercise_lists
-
+    has_many :exercises, through: :exercise_lists, dependent: :destroy
     belongs_to :personal_trainer
     
     accepts_nested_attributes_for :exercises

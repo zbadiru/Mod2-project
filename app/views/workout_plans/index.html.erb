@@ -1,7 +1,7 @@
 <h1>All Workout Plans</h1>
 
 <% @workout_plans.each do |workout_plan| %>
-    <h2><%= link_to workout_plan.name, workout_plan_path(workout_plan.id)%></h2>
+    <h2><%= link_to workout_plan.routine.name, workout_plan%></h2>
 <% end %>
 
 <button>

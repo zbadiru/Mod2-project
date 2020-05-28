@@ -1,5 +1,30 @@
 <h1>Editing Routine..</h1>
-<%= render  "form", routine: @routine %>
+<%= form_for @routine do |f|%>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    
+    <%= f.label :personal_trainer %>
+    <%= f.collection_select :personal_trainer_id, PersonalTrainer.all, :id, :name, prompt: true%> <br>
+
+    <%= f.label :exercise_1 %>
+    <%= text_field "exercises", "exercise_1", value: @routine.exercises[0].name %><br>
+
+    <%= f.label :exercise_2 %>
+    <%= text_field "exercises", "exercise_2", value: @routine.exercises[1].name %><br>
+
+    <%= f.label :exercise_3 %>
+    <%= text_field "exercises", "exercise_3", value: @routine.exercises[2].name %><br>
+    
+    <%= f.label :exercise_4 %>
+    <%= text_field "exercises", "exercise_4", value: @routine.exercises[3].name %><br>
+    
+    <%= f.label :repetitions %>
+    <%= f.number_field :repetitions %><br>
+
+    <%= f.submit %>
+    <% end %>
+
 <button>
     <%= link_to "Back", routine_path(@routine.id) %>
 </button> 

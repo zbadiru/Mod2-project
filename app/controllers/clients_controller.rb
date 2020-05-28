@@ -1,6 +1,10 @@
 class ClientsController < ApplicationController
     before_action :find_client, only: [:show, :update, :edit, :destroy]
 
+    def index
+        @clients = Client.all
+    end
+
     def show 
     end
 

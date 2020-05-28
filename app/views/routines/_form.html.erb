@@ -6,9 +6,16 @@
     <%= f.label :personal_trainer %>
     <%= f.collection_select :personal_trainer_id, PersonalTrainer.all, :id, :name, prompt: true%> <br>
 
+    <%= f.label :exercise_1 %>
     <%= text_field "exercises", "exercise_1" %><br>
+
+    <%= f.label :exercise_2 %>
     <%= text_field "exercises", "exercise_2" %><br>
+
+    <%= f.label :exercise_3 %>
     <%= text_field "exercises", "exercise_3" %><br>
+    
+    <%= f.label :exercise_4 %>
     <%= text_field "exercises", "exercise_4" %><br>
     
     <%= f.label :repetitions %>

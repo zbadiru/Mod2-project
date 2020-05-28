@@ -1,18 +1,8 @@
-<h1><%= @workout_plan.name %></h1>
-<h2>Routines Create</h2>
-<% for routine in @workout_plan.personal_trainer.routines%>
 
-    <h3><%= routine.name %></h3>
+<h2>Routines Create by: <%= @workout_plan.personal_trainer.name%></h2>
 
-    <% for exercise in routine.exercises %>
 
-    <h4><%= exercise.name %></h4>
-
-    <% end %>
-<% end %>
-
-<h3>Personal Trainer: <%= @workout_plan.personal_trainer.name%></h3>
-
+    <h3><%= link_to "#{@workout_plan.routine.name}", @workout_plan.routine %></h3>
 
 
 <button>

@@ -39,12 +39,8 @@ Routine.create([
         name: 'Chest-day-1',
         personal_trainer_id: 1,
         repetitions: 3,
+        exercise_list_id: 1
 
-    },
-    {
-        name: 'Chest-day-2',
-        personal_trainer_id: 2,
-        repetitions: 2,
     }
 ])
 
@@ -64,17 +60,6 @@ Exercise.create([
     {
         name: "Incline press",
         exercise_list_id: 4
-    }
-])
-
-WorkoutPlan.create([
-    {
-        name: 'Chest Day',
-        personal_trainer_id: 1
-    },
-    {
-        name: 'Leg Day',
-        personal_trainer_id: 2
     }
 ])
 

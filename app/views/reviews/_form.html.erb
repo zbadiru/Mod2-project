@@ -1,5 +1,9 @@
 <%= form_for(@review) do |f| %>
 <%= f.label :content%>
 <%= f.text_area :content %><br>
+
+<%= f.label :Client%>
+<%= f.collection_select :client_id, Client.all, :id, :name, prompt: true%> <br>
+
 <%= f.submit %>
 <% end %>
