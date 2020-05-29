@@ -10,6 +10,76 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ *= require_main .
  *= require_self
  */
+
+html, boby{
+    height: 100%;
+    font-size: 17px;
+    line-height: 28px;
+    background-image: url("https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?cs=srgb&dl=man-and-woman-holding-battle-ropes-1552242.jpg&fm=jpg");
+    background-size: 100% 100%; 
+    font-weight: normal;
+    font-family: 'Orienta', sans-serif;
+    letter-spacing: 1px;
+    font-style: italic;
+    text-decoration-style: wavy;
+    text-align: center;
+}
+
+#nav-bar {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+button {
+    height: 30px;
+}
+
+h1 {
+    font-size: 34px;
+    line-height: 40px;
+    text-decoration-style: wavy;
+    padding: 10px;
+    background-clip: padding-box;
+    background: grey;
+    opacity: 0.5;
+  }
+
+  h2, h3 {
+    line-height: 40px;
+    text-decoration-style: wavy;
+    padding: 10px;
+    background-clip: padding-box;
+    background: grey;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding-right: 5px;
+    text-align: center;
+    padding-right: 9px;
+    opacity: 0.5;
+  }
+  
+
+li {
+    font-size: 20px ;
+    line-height: 40px;
+    text-decoration-style: wavy;
+    padding: 10px;
+    background-clip: padding-box;
+    background: grey;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding-right: 5px;
+    text-align: center;
+    padding-right: 9px;
+    opacity: 0.5;
+}
+
+label {
+    background: grey;
+}
+
+
+

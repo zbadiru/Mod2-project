@@ -23,6 +23,6 @@ class WorkoutPlansController < ApplicationController
     private
 
     def workout_plan_params
-        params.require(:workout_plan).permit(:name, :personal_trainer_id)
+        params.require(:workout_plan).permit(:routine_id, :personal_trainer_id)
     end
 end
